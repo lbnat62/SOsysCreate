@@ -33,3 +33,4 @@ insert into Customers values (
 prompt *** YOUR ACCOUNT HAS BEEN CREATED ***
 select 'Your Account Number is: '||CNum_seq.currval from dual;
 select * from Customers where CustomerID=(select max(CustomerID) from Customers);
+commit;
