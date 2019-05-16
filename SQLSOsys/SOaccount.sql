@@ -1,5 +1,8 @@
 /* create new user account */
-set echo on
+set echo off
+set feedback off
+set verify off
+set heading off
 
 spool t:account.txt
 
@@ -31,4 +34,7 @@ insert into Customers values (
 	'&v_Phone');
 
 prompt *** YOUR ACCOUNT HAS BEEN CREATED ***
-select * from Customers where CNum_seq.currval = CustomerID;
+select 'Your Account Number is: '||CNum_seq.currval from dual;
+select * from Customers where CustomerID=(select max(CustomerID) from Customers);
+
+spool off
