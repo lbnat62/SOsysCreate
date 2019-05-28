@@ -1,7 +1,5 @@
 /* creating tables */
-/* Nick Truex IS380 */
-/* creating tables */
-/* Nick Truex IS380 */
+/* Nick Truex */
 
 
 set echo on
